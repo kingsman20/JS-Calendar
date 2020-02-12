@@ -1,0 +1,92 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#calendar {
+  display: grid;
+  grid-template-areas: 
+    ". header ."
+    "left main right";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 10% 1fr 10%;
+}
+
+.month {
+	grid-area: header;
+  align-self: center;
+  justify-self: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.left {
+  grid-area: left;
+  text-align: center;
+  align-self: center;
+  padding: 12px;
+  background-color: gray;
+  border-radius: 50%;
+  color: white;
+}
+
+.right {
+  grid-area: right;
+  text-align: center;
+  align-self: center;
+  padding: 12px;
+  background-color: gray;
+  border-radius: 50%;
+  color: white;
+}
+
+.main {
+  grid-area: main;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+}
+
+#weekdays {
+	margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid gray;
+}
+
+#weekdays li {
+  text-align: center;
+  font-weight: bold;
+}
+
+#days {
+	padding: 10px 0;
+	margin: 0;
+}
+
+#days li {
+	text-align: center;
+	font-size: 16px;
+	padding: 15px;
+}
+
+.red {
+	color: red;
+}
+
+#next,
+#prev {
+	cursor: pointer;
+}
+
+#days,
+#weekdays {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+}
